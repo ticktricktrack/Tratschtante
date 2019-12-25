@@ -15,7 +15,7 @@ const Messages = ({messages}) => {
         <div key={'message' + index }>
           <ListItem alignItems="flex-start" key={index}>
             <ListItemAvatar>
-              <Avatar alt="Remy Sharp" src="https://api.adorable.io/avatars/100/foo.png" />
+              <Avatar src="https://api.adorable.io/avatars/100/foo.png" />
             </ListItemAvatar>
             <ListItemText
               primary={message.body}

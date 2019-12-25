@@ -62832,7 +62832,6 @@ var Messages = function Messages(_ref) {
       alignItems: "flex-start",
       key: index
     }, _react.default.createElement(_ListItemAvatar.default, null, _react.default.createElement(_Avatar.default, {
-      alt: "Remy Sharp",
       src: "https://api.adorable.io/avatars/100/foo.png"
     })), _react.default.createElement(_ListItemText.default, {
       primary: message.body
@@ -62950,7 +62949,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58083" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36617" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

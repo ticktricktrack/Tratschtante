@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx:1.17.6-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+  tratschtante-client:
+    image: node:13.5.0-alpine
+    ports:
+      - 5001:5001
+    command: yarn watch
+    volumes:
+      - ../frontend/:/app
+    working_dir: /app
+  tratschtante-api:
+    image: node:13.5.0-alpine
+    ports:
+      - 5000:5000
+    command: yarn watch
+    volumes:
+      - ../api:/app
+    working_dir: /app
