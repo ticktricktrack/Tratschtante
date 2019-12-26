@@ -8,7 +8,10 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
   tratschtante-client:
-    image: node:13.5.0-alpine
+    image: 778593510599.dkr.ecr.eu-west-2.amazonaws.com/tratschtante-client
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
     ports:
       - 5001:5001
     command: yarn watch
@@ -16,7 +19,10 @@ services:
       - ../frontend/:/app
     working_dir: /app
   tratschtante-api:
-    image: node:13.5.0-alpine
+    image: 778593510599.dkr.ecr.eu-west-2.amazonaws.com/tratschtante-api
+    build:
+      context: ../api
+      dockerfile: Dockerfile
     ports:
       - 5000:5000
     command: yarn watch
