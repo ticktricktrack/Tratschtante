@@ -1,12 +1,5 @@
 version: '3.7'
 services:
-  nginx:
-    image: nginx:1.17.6-alpine
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx:/etc/nginx/conf.d
   tratschtante-client:
     image: 778593510599.dkr.ecr.eu-west-2.amazonaws.com/tratschtante-client
     build:
